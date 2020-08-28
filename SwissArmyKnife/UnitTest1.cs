@@ -1,5 +1,6 @@
 using NUnit.Framework;
 using NUnit.Framework.Internal;
+using System;
 using TestMe;
 
 namespace SwissArmyKnife
@@ -21,6 +22,16 @@ namespace SwissArmyKnife
             int result = swiisArmyKnife.ParseStringToInt(number);
 
             Assert.AreEqual(1, result);
+        }
+
+        [Test]
+        public void Test2_ParseStringToInt_Parses_Exception()
+        {
+            string number = "1#";
+
+            var swiisArmyKnife = new TestMe.SwissArmyKnife();
+
+            Assert.Throws<ArgumentException>(() => swiisArmyKnife.ParseStringToInt(number));
         }
     }
 }

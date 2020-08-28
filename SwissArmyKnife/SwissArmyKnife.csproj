@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TestMe1">
-      <HintPath>..\..\..\..\Documents\home_ex\DLL Versions\TestMe1.dll</HintPath>
+    <Reference Include="TestMe2">
+      <HintPath>..\..\..\..\Documents\home_ex\DLL Versions\TestMe2.dll</HintPath>
     </Reference>
   </ItemGroup>
 
