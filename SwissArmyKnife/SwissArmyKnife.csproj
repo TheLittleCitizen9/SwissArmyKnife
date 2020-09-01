@@ -7,14 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="JustMock" Version="2020.2.616.1" />
+    <PackageReference Include="Moq" Version="4.14.5" />
     <PackageReference Include="nunit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.15.1" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="TestMe3">
-      <HintPath>..\..\..\..\Documents\home_ex\DLL Versions\TestMe3.dll</HintPath>
+    <Reference Include="TestMe4">
+      <HintPath>..\..\..\..\Documents\Exercises\DLL Versions\TestMe4.dll</HintPath>
     </Reference>
   </ItemGroup>
 
