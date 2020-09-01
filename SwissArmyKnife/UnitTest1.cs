@@ -2,10 +2,8 @@ using Moq;
 using NUnit.Framework;
 using NUnit.Framework.Internal;
 using System;
-using System.Collections.Generic;
+using System.Linq;
 using TestMe;
-using Telerik.JustMock;
-using Telerik.JustMock.Helpers;
 
 namespace SwissArmyKnife
 {
@@ -55,6 +53,19 @@ namespace SwissArmyKnife
 
             }
             mock.Verify(x => x.Log(It.IsAny<string>()), Times.Once());
+        }
+
+        [Test]
+        public void Test4_PickFreshestFruit_Correctly()
+        {
+            IFruitProvider fruitProvider = new StubFruitProvider();
+            var swiisArmyKnife = new TestMe.SwissArmyKnife();
+            var mock = new Mock<TestMe.ILogger>();
+            mock.Setup(x => x.Log(It.IsAny<string>()));
+
+            var freshestFruit = swiisArmyKnife.PickFreshestFruit(fruitProvider, mock.Object);
+
+            Assert.AreEqual(2, freshestFruit.FreshnessLevel);
         }
     }
 }
